@@ -1,0 +1,177 @@
+// 引入 elementUI 自定义样式
+@import "./element.scss";
+// 引入 报错页面 样式
+@import "./error.scss";
+
+// 清除默认样式
+html,
+body,
+#app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--el-bg-color-page);
+}
+
+// 去除a标签默认样式
+a {
+  color: var(--el-color-primary);
+  text-decoration: none;
+  outline: 0;
+}
+
+a:hover {
+  color: #0a16f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+// 卡片布局
+.card-bg {
+  padding: 20px;
+  border-radius: $circle-radius;
+  background-color: white;
+}
+
+// 通用查询表单样式
+.search-page {
+  margin-bottom: 20px;
+
+  .search-form,
+  .search-btn {
+    padding: 0 10px;
+  }
+
+  // 更多
+  .search-more {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  // 按钮
+  .search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #e5e6eb;
+
+    .el-button {
+      margin: 10px 5px 0 5px;
+      width: 100%;
+    }
+  }
+
+  // PC端样式
+  @media (min-width: 1200px) {
+    .search-more {
+      justify-content: flex-end;
+    }
+
+    .search-btn {
+      flex-direction: column;
+      border: none;
+      border-left: 1px solid #e5e6eb;
+
+      .el-button {
+        margin: 0;
+
+        &:nth-child(2) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+// 通用列表样式
+.table-page {
+  .table-page-header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .table-page-header-title {
+      padding-left: 5px;
+      border-left: 3px solid var(--el-color-primary);
+    }
+  }
+
+  .table-btn {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      font-size: 14px;
+    }
+  }
+
+  .table-page-pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// 通用对话框样式
+.dialog-page {
+  max-height: 50vh;
+  overflow: auto;
+}
+
+// 表单计量单位样式
+.form-measure {
+  text-align: center;
+}
+
+// 自定义 el-input-number 携带前后图标
+.form-input-number {
+  .el-form-item__content {
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: var(--el-border-radius-base);
+    box-shadow: 0 0 0 1px #dcdfe6 inset;
+    color: var(--el-text-color-placeholder);
+  }
+
+  .el-input-number {
+    width: auto;
+    flex-grow: 1;
+
+    .el-input__wrapper {
+      padding: 0;
+      box-shadow: none;
+    }
+
+    .el-input__inner {
+      text-align: left;
+    }
+  }
+
+  .prefix {
+    padding-right: 10px;
+    width: auto;
+  }
+
+  .suffix {
+    padding-left: 10px;
+    width: auto;
+  }
+}
+
+// 图标间距
+.i-icon {
+  margin: 0 5px;
+}

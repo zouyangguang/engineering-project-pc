@@ -1,0 +1,151 @@
+// 自定义样式
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  // 全局颜色
+  $colors:
+    (
+      // 主色
+      "primary": ("base": #1677ff),
+      // 成功色
+      "success": ("base": #52c41a),
+      // 警告色
+      "warning": ("base": #faad14),
+      // 错误色
+      "danger": ("base": #f5222d),
+      // 错误色
+      "error": ("base": #f5222d),
+      // 信息色
+      "info": ("base": #8c8c8c)
+    ),
+  // 全局文字颜色
+  $text-color:
+    (
+      // 主色
+      "primary": #1f1f1f,
+      // 辅助色
+      "regular": #595959,
+      // 次要色
+      "secondary": #595959
+    ),
+  // 全局背景色
+  $bg-color:
+    (
+      // 页面背景
+      "page": #f6f8fa
+    ),
+  // 全局圆角
+  $border-radius:
+    (
+      // 默认
+      "base": 6px,
+      // 小
+      "small": 4px
+    ),
+  // 菜单
+  $menu:
+    (
+      // 垂直菜单 子项 高度
+      "item-height": 50px,
+
+      // 水平菜单 子项 高度
+      "horizontal-sub-item-height": 50px
+    ),
+  // 对话框
+  $dialog:
+    (
+      // 边框圆角
+      "border-radius": 8px
+    ),
+  // 气泡确认框
+  $popover:
+    (
+      // 边框圆角
+      "border-radius": 8px
+    )
+);
+
+// 导入所有默认样式
+@use "element-plus/theme-chalk/src/index.scss" as *;
+
+//表单组件宽度【数字输入框、日期选择器】
+.el-select,
+.el-cascader,
+.el-input-number,
+.el-autocomplete,
+.el-date-editor,
+.el-date-editor.el-input,
+.el-date-editor.el-input__inner {
+  width: 100%;
+}
+
+// 自定义菜单样式
+.el-menu {
+  padding: 0 5px;
+  border: 0;
+
+  .el-menu-item {
+    margin: 5px 0;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: var(--el-color-primary-light-9);
+    }
+
+    &.is-active {
+      background-color: var(--el-color-primary-light-9);
+    }
+  }
+}
+
+// 自定义抽屉样式
+.el-drawer__header,
+.el-drawer__footer {
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  border-top: 1px solid var(--el-border-color-lighter);
+  border-bottom: 1px solid var(--el-border-color-lighter);
+}
+
+// 自定义通知 标题 样式
+.el-notification__title {
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// 自定义折叠面板样式
+.el-collapse {
+  border: none;
+
+  .el-collapse-item:nth-child(n + 2) > .el-collapse-item__header {
+    margin-top: 10px;
+  }
+
+  .el-collapse-item__header {
+    padding: 10px;
+    border: none;
+    border-radius: $circle-radius;
+    background-color: var(--el-bg-color-page);
+
+    &.is-active {
+      border-radius: 0;
+      border-top-left-radius: $circle-radius;
+      border-top-right-radius: $circle-radius;
+    }
+  }
+
+  .el-collapse-item__wrap {
+    border: none;
+
+    .el-collapse-item__content {
+      padding: 10px;
+      border-bottom-left-radius: $circle-radius;
+      border-bottom-right-radius: $circle-radius;
+      background-color: var(--el-bg-color-page);
+    }
+  }
+}

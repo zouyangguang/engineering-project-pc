@@ -1,0 +1,96 @@
+import {
+  User,
+  Lock,
+  Peoples,
+  BranchOne,
+  Necktie,
+  HomeTwo,
+  MoveOne,
+  Power,
+  Key,
+  Remind,
+  DownloadFour,
+  AlignTextLeft,
+  LoadingFour,
+  Download,
+  ToBottom,
+  Edit,
+  Upload,
+  Plus,
+  Delete,
+  Help,
+  Search,
+  Undo,
+  Up,
+  Down,
+  EfferentThree,
+  Transfer,
+  Gavel,
+  Agreement,
+  More,
+  TrendTwo,
+  Link,
+  RingOne,
+  DocumentFolder,
+  EveryUser,
+  EditOne,
+  Time,
+  ChartProportion,
+  Redo,
+  CodeBrackets,
+  Close
+} from "@icon-park/vue-next"
+
+import type { App, Component } from "vue"
+
+// 按需引入图标，全局注册组件
+const components: { [name: string]: Component } = {
+  IconClose: Close,
+  IconCodeBrackets: CodeBrackets,
+  IconRedo: Redo,
+  IconChartProportion: ChartProportion,
+  IconTime: Time,
+  IconEditOne: EditOne,
+  IconEveryUser: EveryUser,
+  IconDocumentFolder: DocumentFolder,
+  IconRingOne: RingOne,
+  IconLink: Link,
+  IconTrendTwo: TrendTwo,
+  IconGavel: Gavel,
+  IconAgreement: Agreement,
+  IconHomeTwo: HomeTwo,
+  IconUser: User,
+  IconLock: Lock,
+  IconKey: Key,
+  IconPower: Power,
+  IconPeoples: Peoples,
+  IconBranchOne: BranchOne,
+  IconNecktie: Necktie,
+  IconRemind: Remind,
+  IconDownloadFour: DownloadFour,
+  IconAlignTextLeft: AlignTextLeft,
+  IconMoveOne: MoveOne,
+  IconLoadingFour: LoadingFour,
+  IconDownload: Download,
+  IconToBottom: ToBottom,
+  IconEdit: Edit,
+  IconUpload: Upload,
+  IconPlus: Plus,
+  IconDelete: Delete,
+  IconHelp: Help,
+  IconSearch: Search,
+  IconUndo: Undo,
+  IconUp: Up,
+  IconDown: Down,
+  IconEfferentThree: EfferentThree,
+  IconTransfer: Transfer,
+  IconMore: More
+}
+
+export default {
+  install: (app: App) => {
+    Object.keys(components).forEach(key => {
+      app.component(key, components[key])
+    })
+  }
+}
